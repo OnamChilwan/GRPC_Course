@@ -1,0 +1,9 @@
+*.suo
+*.user
+_ReSharper.*
+./*/obj/
+obj/
+packages/
+./Contracts/
+/obj/**
+/debug/**

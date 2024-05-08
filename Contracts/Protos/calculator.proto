@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service UnaryCalculatorService {
+  rpc Calculate(CalculationRequest) returns (CalculationResponse);
+}
+
+message CalculationRequest {
+  int32 value1 = 1;
+  int32 value2 = 2;
+}
+
+message CalculationResponse {
+  int32 total = 1;
+}

@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service ComputeService {
+  rpc ComputeAverage(stream Compute) returns (ComputeAverageResponse);
+}
+
+message Compute {
+  int32 Value = 1;
+}
+
+message ComputeAverageResponse {
+  double Value = 1;
+}

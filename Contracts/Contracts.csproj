@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Google.Protobuf" Version="3.25.0" />
+        <PackageReference Include="Grpc.AspNetCore" Version="2.58.0" />
+        <PackageReference Include="Grpc.Tools" Version="2.59.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Protobuf Include="Protos\calculator.proto" GrpcServices="Server,Client" />
+        <Protobuf Include="Protos\primenumbers.proto" GrpcServices="Server,Client" />
+        <Protobuf Include="Protos\compute.proto" GrpcServices="Server,Client" />
+        <Protobuf Include="Protos\findmaximum.proto" GrpcServices="Server,Client" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="obj\Debug\net8.0\Protos\" />
+    </ItemGroup>
+</Project>

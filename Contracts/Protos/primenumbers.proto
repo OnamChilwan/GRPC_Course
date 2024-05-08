@@ -1,0 +1,14 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+service PrimeNumberServerStreamService {
+  rpc PrimeNumbers(PrimeNumberRequest) returns (stream PrimeNumber);
+}
+
+message PrimeNumberRequest {
+  int32 Value = 1;
+}
+
+message PrimeNumber {
+  int32 Value = 1;
+}
